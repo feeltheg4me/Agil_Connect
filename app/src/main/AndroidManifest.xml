@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.agil.connect">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:name="com.agil.connect.live.AgoraApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
+        <activity android:name="com.agil.connect.activity.CommentRetweetedByActivity"/>
+        <activity android:name="com.agil.connect.activity.CommentLikedByActivity"/>
+        <activity android:name="com.agil.connect.activity.StoryChatViewActivity"/>
+        <activity android:name="com.agil.connect.activity.AboutActivity" />
+        <activity
+            android:name="com.agil.connect.live.activities.LiveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.agil.connect.activity.Policy"/>
+        <activity android:name="com.agil.connect.activity.Terms"/>
+        <activity android:name="com.agil.connect.live.activities.AudienceActivity" />
+        <activity android:name="com.agil.connect.live.activities.GoAudienceActivity" />
+        <activity android:name="com.agil.connect.live.activities.GoBroadcastActivity" />
+        <activity android:name="com.agil.connect.live.activities.BroadcasterActivity" />
+        <activity android:name="com.agil.connect.activity.ViewedActivity" />
+        <activity android:name="com.agil.connect.activity.AddActivity" />
+        <activity android:name="com.agil.connect.activity.StoryViewActivity" />
+        <activity android:name="com.agil.connect.admin.PendingVerificationActivity" />
+        <activity android:name="com.agil.connect.activity.VerifyActivity" />
+        <activity android:name="com.agil.connect.BanActivity" />
+        <activity android:name="com.agil.connect.admin.PostListActivity" />
+        <activity android:name="com.agil.connect.admin.PostReportListActivity" />
+        <activity android:name="com.agil.connect.admin.UserReportListActivity" />
+        <activity android:name="com.agil.connect.admin.UserListActivity" />
+        <activity android:name="com.agil.connect.admin.AdminActivity" />
+        <activity android:name="com.agil.connect.activity.MediaActivity" />
+        <activity android:name="com.agil.connect.activity.EditPostActivity" />
+        <activity android:name="com.agil.connect.activity.EditPasswordActivity" />
+        <activity android:name="com.agil.connect.activity.EditEmailActivity" />
+        <activity android:name="com.agil.connect.activity.SavedPostActivity" />
+        <activity android:name="com.agil.connect.activity.RetweetedByActivity" />
+        <activity android:name="com.agil.connect.activity.FollowersActivity" />
+        <activity android:name="com.agil.connect.activity.FollowingActivity" />
+        <activity android:name="com.agil.connect.activity.LikedByActivity" />
+        <activity android:name="com.agil.connect.activity.SettingsActivity" />
+        <activity android:name="com.agil.connect.activity.SearchPostActivity" />
+        <activity android:name="com.agil.connect.activity.ChatActivity" />
+        <activity android:name="com.agil.connect.activity.CreateChatActivity" />
+        <activity android:name="com.agil.connect.activity.CommentActivity" />
+        <activity android:name="com.agil.connect.activity.UserProfileActivity" />
+        <activity android:name="com.agil.connect.activity.EditProfileActivity" />
+        <activity android:name="com.agil.connect.emailAuth.ForgotPasswordActivity" />
+        <activity android:name="com.agil.connect.CheckActivity" />
+        <activity android:name="com.agil.connect.activity.CreatePostActivity" />
+        <activity android:name="com.agil.connect.activity.MyProfileActivity" />
+        <activity android:name="com.agil.connect.phoneAuth.PhoneSignUpActivity" />
+        <activity android:name="com.agil.connect.phoneAuth.VerifyOTPActivity" />
+        <activity android:name="com.agil.connect.phoneAuth.GenerateOTPActivity" />
+        <activity android:name="com.agil.connect.emailAuth.SignUpActivity" />
+        <activity android:name="com.agil.connect.emailAuth.PasswordActivity" />
+        <activity android:name="com.agil.connect.emailAuth.EmailActivity" />
+        <activity android:name="com.agil.connect.welcome.WelcomeActivity" />
+        <activity android:name="com.agil.connect.welcome.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.agil.connect.MainActivity" />
+        <service
+            android:name="com.agil.connect.notifications.FirebaseMessaging"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-8957916229862289~8996479428"/>
+    </application>
+</manifest>
